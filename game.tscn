@@ -1,0 +1,92 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://game.gd" type="Script" id=1]
+[ext_resource path="res://images/ball.png" type="Texture" id=2]
+[ext_resource path="res://images/playerGrey_up2.png" type="Texture" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="foodSprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( 27.7286, 24.0636 )
+transform/rot = 5.00896e-06
+transform/scale = Vector2( 3, 3 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="foodSprite"]
+
+transform/pos = Vector2( 0.0457888, -0.0164509 )
+transform/scale = Vector2( 0.131784, 0.129839 )
+input/pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="playerSprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( 500, 500 )
+transform/rot = 180.0
+transform/scale = Vector2( 0.2, -0.2 )
+texture = ExtResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="playerSprite"]
+
+transform/pos = Vector2( 2.03149, -3.1853 )
+transform/scale = Vector2( 1.53892, 1.76218 )
+input/pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="Button" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 462.0
+margin/top = 247.0
+margin/right = 538.0
+margin/bottom = 267.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Start"
+flat = false
+
+[node name="titleLabel" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 427.0
+margin/top = 171.0
+margin/right = 575.0
+margin/bottom = 236.0
+text = "Sneek Snake Game
+Made by Andries"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="scoreLabel" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 15.0
+margin/top = 14.0
+margin/right = 55.0
+margin/bottom = 28.0
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+
